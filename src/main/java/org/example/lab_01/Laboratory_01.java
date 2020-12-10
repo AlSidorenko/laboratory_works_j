@@ -22,12 +22,12 @@ public class Laboratory_01 {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Please, enter a: ");
-        double a = sc.nextDouble();
+        double a = Double.valueOf(sc.nextLine());
 
         System.out.print("Please, enter b: ");
-        double b = sc.nextDouble();
+        double b = Double.valueOf(sc.nextLine());
 
-        System.out.printf("Result: %s", new Laboratory_01().homeWork(a, b));
+        System.out.printf("Result: %s\n", new Laboratory_01().homeWork(a, b));
     }
 
     public double homeWork(double a, double b) {
