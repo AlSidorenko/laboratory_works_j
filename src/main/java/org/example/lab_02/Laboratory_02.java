@@ -1,4 +1,4 @@
-package org.example;
+package org.example.lab_02;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class Laboratory_02 {
     public double function(int x, int y) {
         double res;
         if (x > 0 & y > 0) {
-            res = (x + y) / x * y + (Math.pow(x, 3));
+            res = (x + y) / (x * y) + (Math.pow(x, 3));
         } else if (x == 0) {
             res = 3.14 * y;
         } else if (y == 0) {
