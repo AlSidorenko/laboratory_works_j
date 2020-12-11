@@ -1,4 +1,4 @@
-package org.example.lab_03_in_process;
+package org.example.lab_03;
 
 import java.util.ArrayList;
 import java.util.Scanner;
