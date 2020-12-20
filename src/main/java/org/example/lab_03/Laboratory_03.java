@@ -34,8 +34,10 @@ public class Laboratory_03 {
         double kMax = Double.valueOf(scanner.nextLine());
 
         System.out.printf("Result: %s\n", mathSeries(x, kMax).toString());
+        System.out.printf("Sum items: %s\n", sumElem(mathSeries(x, kMax)));
     }
 
+    // Математический ряд.
     public static ArrayList<Double> mathSeries(double x, double kMax) {
         ArrayList<Double> doubleArrayList = new ArrayList<>();
         double res;
@@ -47,6 +49,16 @@ public class Laboratory_03 {
         return doubleArrayList;
     }
 
+    // Сумма єлементов математического ряда
+    public static double sumElem(ArrayList<Double> mathSeries) {
+        double sum = 0.0;
+        for (int i = 0; i < mathSeries.size(); i++) {
+            sum += mathSeries.get(i);
+        }
+        return sum;
+    }
+
+    // Факториал
     public static int factorialInt(double kMax) {
         // проверка на отрицательное значение
         checkNotNegative(kMax);
