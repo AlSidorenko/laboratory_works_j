@@ -1,6 +1,5 @@
 package org.example.lab_01;
 
-import org.example.lab_01.Laboratory_01;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -18,7 +17,7 @@ public class Laboratory_01_Test {
     @Test
     public void whenTestLab01() {
         Laboratory_01 lab = new Laboratory_01();
-        double result = lab.homeWork(2.25,1.05);
+        double result = lab.function(2.25,1.05);
         double expected = 3.8644908107496994;
 
         assertThat(result, is(expected));
