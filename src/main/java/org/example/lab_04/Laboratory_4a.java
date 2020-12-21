@@ -25,9 +25,9 @@ public class Laboratory_4a {
     public ArrayList<String> result(double[] arr) {
         ArrayList<String> arrStr = new ArrayList<>();
 
-        for (double v : arr) {
+        for (double i : arr) {
             // Каждый элемент массива превращаем в строку
-            String elem = String.valueOf(v);
+            String elem = String.valueOf(i);
             // из каждой строки делаем массив символов
             char[] y = elem.toCharArray();
             for (int j = 0; j < y.length; j++) {
