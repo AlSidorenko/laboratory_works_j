@@ -32,7 +32,6 @@ public class Laboratory_04 {
                 if (arr[i][j] == sumMatrixB(arr)) {
                     indexOfItem = arr[i][j];
                     System.out.printf("arr[%d][%d] = %d", i, j, indexOfItem);
-                    break;
                 }
             }
         }
