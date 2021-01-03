@@ -46,7 +46,7 @@ public class Laboratory_01 {
 
         Random r = new Random();
         int low = 1;
-        int high = 100;
+        int high = 9;
 
         for (int i = 0; i < arrTemp.length; i++) {
             for (int j = 0; j < arrTemp[i].length; j++) {
