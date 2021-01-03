@@ -1,4 +1,4 @@
-package org.example.lab_03;
+package org.example.III_course.Labs_001_AlgorithmisationAndProgramming.lab_03;
 
 import java.util.ArrayList;
 import java.util.Scanner;

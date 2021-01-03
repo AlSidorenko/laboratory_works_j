@@ -1,4 +1,4 @@
-package org.example.lab_06_in_process;
+package org.example.III_course.Labs_001_AlgorithmisationAndProgramming.lab_06;
 
 import java.util.ArrayList;
 
