@@ -25,8 +25,6 @@ public class Laboratory_06 {
         for (int i = 0; i < textArr.length; i++) {
             if (textArr[i].equals(word)) {
                 result = true;
-            } else {
-                result = false;
             }
         }
         return result;
