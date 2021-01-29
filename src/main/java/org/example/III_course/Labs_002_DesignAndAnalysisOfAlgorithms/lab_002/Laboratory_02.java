@@ -1,5 +1,10 @@
 package org.example.III_course.Labs_002_DesignAndAnalysisOfAlgorithms.lab_002;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -11,7 +16,7 @@ import java.util.Scanner;
  */
 public class Laboratory_02 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int counter, num, item, array[], first, last;
 
         Scanner input = new Scanner(System.in);
@@ -25,15 +30,28 @@ public class Laboratory_02 {
         for (counter = 0; counter < num; counter++)
             array[counter] = input.nextInt();
 
-        //Arrays.sort(array);
-        bubbleSortArray(array);
-
         System.out.print("Enter an element for binary search: ");
         item = input.nextInt();
         first = 0;
         last = num - 1;
 
+        long timeStart = System.currentTimeMillis();
+        //Arrays.sort(array);
+        bubbleSortArray(array);
         binarySearch(array, first, last, item);
+        long timeFinish = System.currentTimeMillis();
+
+        Date dt = new Date(timeFinish - timeStart);
+        SimpleDateFormat sdf = new SimpleDateFormat("mm:ss:SS");
+        String resTime = sdf.format(dt);
+        System.out.printf("Time: %s", resTime);
+
+        FileWriter fw = new FileWriter("report_search.txt", true);
+        BufferedWriter bufferWriter = new BufferedWriter(fw);
+        bufferWriter.write("------------------------------------------- \n");
+        bufferWriter.write(String.format("N = %d                        Time: %s\n", num, resTime));
+        bufferWriter.close();
+        fw.close();
     }
 
     // Dichotomous Search
