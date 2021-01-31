@@ -10,7 +10,7 @@ package org.example.III_course.Labs_003_AlgorithmsAndDataStructures.lab_001;
 public class Laboratory_01 {
 
     public static void main(String[] args) {
-        String text = "Ho,w is yo;ur doi!ng.???";
+        String text = "How is your doing.";
         String[] arrText = text.split(" ");
         result(arrText);
     }
@@ -21,7 +21,7 @@ public class Laboratory_01 {
         for (int i = 0; i < arr.length; i++) {
             count = count + (checkChars(arr[i]) - 1);
         }
-        System.out.println(count);
+        System.out.printf("Result of characters occurrence: %d\n", count);
     }
 
     public static int checkChars(String word) {
