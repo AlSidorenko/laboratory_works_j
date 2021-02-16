@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>laboratory_works_j</artifactId>
+    <artifactId>laboratory_works_java</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>laboratory_works_j</name>
+    <name>laboratory_works_java</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
