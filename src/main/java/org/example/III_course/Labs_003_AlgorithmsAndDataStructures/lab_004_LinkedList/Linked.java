@@ -11,14 +11,9 @@ public interface Linked<E> {
 
     void insertNode(E e);
     void insertFirst(E e);
-    void insertNth(E e, int position);
     void deleteFirstNode();
-    void deleteLastNode();
-    void deleteNthNode(int position);
-    void findNode(E e);
-    void findNodeAt(int location);
-    void findLastNode();
     void printNodes();
+    void deleteAll();
     int getListSize();
 
 }

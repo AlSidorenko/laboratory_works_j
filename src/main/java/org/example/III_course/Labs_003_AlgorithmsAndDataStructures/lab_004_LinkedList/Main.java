@@ -24,32 +24,9 @@ class Main {
 
         System.out.println();
 
-        System.out.println("Finding item Petr Petrov in the Linked list");
-        list.findNode(new Person("Petr", "Petrov"));
-        System.out.println("Finding item nonExist in the Lineked list");
-        list.findNode(new Person("Alec", "Syd"));
-
-        System.out.println();
-
-        System.out.println("Finding item at location 3");
-        list.findNodeAt(3);
-
-        System.out.println();
-        System.out.println("Finding item at last location ");
-        list.findLastNode();
-
-        System.out.println();
-
         System.out.println("Current Size of the list is: " + list.getListSize());
         System.out.println("Adding David Sid at start of the Node");
         list.insertFirst(new Person("David", "Sid"));
-        list.printNodes();
-
-        System.out.println();
-
-        System.out.println("Current Size of the list is: " + list.getListSize());
-        System.out.println("Adding testNth at 2nd Location");
-        list.insertNth(new Person("Roman", "Denyneka"), 2);
         list.printNodes();
 
         System.out.println();
@@ -62,15 +39,9 @@ class Main {
         System.out.println();
 
         System.out.println("Current Size of the list is: " + list.getListSize());
-        System.out.println("Deleting last node");
-        list.deleteLastNode();
+        System.out.println("Deleting all nodes");
+        list.deleteAll();
         list.printNodes();
 
-        System.out.println();
-
-        System.out.println("Current Size of the list is: " + list.getListSize());
-        System.out.println("Deleting node from 4th location");
-        list.deleteNthNode(4);
-        list.printNodes();
     }
 }

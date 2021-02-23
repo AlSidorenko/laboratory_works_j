@@ -19,9 +19,9 @@ class LinkedList<E> implements Linked<E> {
 
     @Override
     public void insertNode(E e) {
-        Node<E> node = new Node<>();
+        Node<E> node = new Node();
         node.item = e;
-        Node<E> current = this.head;
+        Node current = this.head;
 
         if (this.head == null) {
             this.head = node;
@@ -49,23 +49,6 @@ class LinkedList<E> implements Linked<E> {
     }
 
     @Override
-    public void insertNth(E e, int position) {
-        Node<E> node = new Node<>();
-        node.item = e;
-        Node<E> current = this.head;
-        if (this.head != null && position <= this.size) {
-            for (int i = 1; i < position; i++) {
-                current = current.nextElement;
-            }
-            node.nextElement = current.nextElement;
-            current.nextElement = node;
-            this.size += 1;
-        } else {
-            System.out.println("Exceeded the linked list size. Current Size: " + size);
-        }
-    }
-
-    @Override
     public void deleteFirstNode() {
         if (head != null) {
             this.head = this.head.nextElement;
@@ -75,25 +58,8 @@ class LinkedList<E> implements Linked<E> {
         }
     }
 
-    @Override
-    public void deleteLastNode() {
-        Node<E> currentNode = this.head;
-        if (size == 1) {
-            head = null;
-            size = 0;
-        } else {
-            Node<E> prevNode = null;
-            while (currentNode.nextElement != null) {
-                prevNode = currentNode;
-                currentNode = currentNode.nextElement;
-            }
-            prevNode.nextElement = null;
-            this.size--;
-        }
-    }
-
-    @Override
-    public void deleteNthNode(int position) {
+    /*@Override
+    public void deleteAll(int position) {
         if (position <= this.size && this.head != null) {
             Node<E> currentNode = this.head;
             Node<E> prevNode = null;
@@ -106,49 +72,24 @@ class LinkedList<E> implements Linked<E> {
         } else {
             System.out.println("No node exist at location: " + position);
         }
-    }
+    }*/
+
+    /*public void removeAll(Object data) {
+        SinglyLinkedNode x = head;
+
+        for (int i = 0; i < size; x = x.next)
+            if (x.data.equals(data))
+                remove(i);
+            else
+                i++;
+    }*/
 
     @Override
-    public void findNode(E e) {
-        Node<E> node = this.head;
-        boolean found = false;
-        for (int i = 0; i < size; i++) {
-            if (node.item.equals(e)) {
-                System.out.println("Item " + e + " was found at location " + i + " in the linked list");
-                found = true;
-            }
-            node = node.nextElement;
-        }
-
-        if (!found)
-            System.out.println("Item " + e + " was not found in the Linked list");
+    public void deleteAll() {
+        head = null;
+        size = 0;
+        System.out.println("Linked list is empty");
     }
-
-    @Override
-    public void findNodeAt(int location) {
-        Node<E> node = this.head;
-        if (head != null && location <= size) {
-            for (int i = 0; i < location; i++) {
-                node = node.nextElement;
-            }
-            System.out.println("Node item at location " + location + " is " + node.item);
-        }
-    }
-
-    /**
-     * Find the item at the last location
-     */
-    @Override
-    public void findLastNode() {
-        Node<E> node = this.head;
-        if (head != null) {
-            for (int i = 0; i < size - 1; i++) {
-                node = node.nextElement;
-            }
-            System.out.println("Node item at last location is " + node.item);
-        }
-    }
-
 
     /**
      * Printing all the items in the list
