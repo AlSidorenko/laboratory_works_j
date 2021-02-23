@@ -19,9 +19,9 @@ class LinkedList<E> implements Linked<E> {
 
     @Override
     public void insertNode(E e) {
-        Node<E> node = new Node();
+        Node<E> node = new Node<>();
         node.item = e;
-        Node current = this.head;
+        Node<E> current = this.head;
 
         if (this.head == null) {
             this.head = node;
@@ -58,32 +58,6 @@ class LinkedList<E> implements Linked<E> {
         }
     }
 
-    /*@Override
-    public void deleteAll(int position) {
-        if (position <= this.size && this.head != null) {
-            Node<E> currentNode = this.head;
-            Node<E> prevNode = null;
-            for (int i = 0; i < position; i++) {
-                prevNode = currentNode;
-                currentNode = currentNode.nextElement;
-            }
-            prevNode.nextElement = currentNode.nextElement;
-            this.size--;
-        } else {
-            System.out.println("No node exist at location: " + position);
-        }
-    }*/
-
-    /*public void removeAll(Object data) {
-        SinglyLinkedNode x = head;
-
-        for (int i = 0; i < size; x = x.next)
-            if (x.data.equals(data))
-                remove(i);
-            else
-                i++;
-    }*/
-
     @Override
     public void deleteAll() {
         head = null;
@@ -110,7 +84,7 @@ class LinkedList<E> implements Linked<E> {
     /**
      * Obtain the current size of the list
      *
-     * @return
+     * @return size;
      */
     @Override
     public int getListSize() {
